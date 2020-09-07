@@ -4,19 +4,21 @@
 
 ### Notes
 
-- Le ID d'un pokemon dans la base de donnée ne correspond pas nécessairement à sont numéro de pokedex étant donnée que certains pokemon partagent le même numéro (voire, les méga évolutions et les formes divers d'un pokemon)
+- Le paramètre pour le numéro d'entrée dans le pokedex est "identifier" et non "id"
+
+- Étant donné que certains pokemon partagent le même numéro d'entrée dans le pokedex (voire, les méga évolutions et les formes diverses d'un pokemon), l'ID d'un pokemon dans la base de données ne correspond pas nécessairement à son numéro de pokedex.
 
 - Les paramètres pour une nouvelle entrée: identifier, name, type_1, type_2, total, hp, attack, defense, sp_attack, sp_defense, speed, generation, legendary
 
-- Les résultants sont en format json
+- Les résultats sont en format JSON
 
-- La base de donnée est SQLite et n'est donc pas optimisée pour recevoir plusieurs connections successives alors les tests unitaires doivent êtres éxecutés une à la fois.
+- La base de données, étant en SQLite, n'est pas optimisée pour recevoir des connexions concurrentes. Les tests unitaires doivent donc être lancés individuellement.
 
 ### Fonctionnement du API
 
-- index - Retourne liste paginée de pokemon (10 résultats par page) -- Paramètre optionel: page_nb (numéro de page)
+- index - Retourner une liste paginée de pokemon (10 résultats par page) -- Paramètre optionel: page_nb (numéro de page)
   
-- show - Retourne pokemon avec ID
+- show - Retourner un pokemon avec ID
 
 - create - Créer une nouvelle entrée
 
