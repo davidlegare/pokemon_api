@@ -1,11 +1,15 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
-# This model initially had no columns defined. If you add columns to the
-# model remove the '{}' from the fixture names and add the columns immediately
-# below each fixture, per the syntax in the comments below
-#
-one: {}
-# column: value
-#
-two: {}
-# column: value
+one:
+  id: 1
+  identifier: 1
+  name: "Bulbasaur"
+  type_1: "Grass"
+  type_2: "Poison"
+  total: 405
+  hp: 60
+  attack: 62
+  defense: 63
+  sp_attack: 80
+  sp_defense: 80
+  speed: 60
+  generation: 1
+  legendary: "False"
