@@ -1,24 +1,32 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Pokemon API avec fontionnement CRUD
 
-Things you may want to cover:
+### Notes
 
-* Ruby version
+- Le ID d'un pokemon dans la base de donnée ne correspond pas nécessairement à sont numéro de pokedex étant donnée que certains pokemon partagent le même numéro (voire, les méga évolutions et les formes divers d'un pokemon)
 
-* System dependencies
+- Les paramètres pour une nouvelle entrée: identifier, name, type_1, type_2, total, hp, attack, defense, sp_attack, sp_defense, speed, generation, legendary
 
-* Configuration
+- Les résultants sont en format json
 
-* Database creation
+- La base de donnée est SQLite et n'est donc pas optimisée pour recevoir plusieurs connections successives alors les tests unitaires doivent êtres éxecutés une à la fois.
 
-* Database initialization
+### Fonctionnement du API
 
-* How to run the test suite
+- index - Retourne liste paginée de pokemon (10 résultats par page) -- Paramètre optionel: page_nb (numéro de page)
+  
+- show - Retourne pokemon avec ID
 
-* Services (job queues, cache servers, search engines, etc.)
+- create - Créer une nouvelle entrée
 
-* Deployment instructions
+- update - Modifier une entrée existante
 
-* ...
+- destroy - Supprimer une entrée existante
+
+<h3>Tests unitaires</h3>
+
+- Show
+- Create
+- Update
+- Delete
